@@ -1,0 +1,37 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book 
+# format can be book or article. 
+root: introqc
+# root is the landing page for the book
+parts:
+  - caption: Quantum vs. Classical
+    numbered: false
+    chapters:
+    - file: TheWorldofQuantum00
+    - file: TheWorldofQuantum01
+    - file: TheWorldofQuantum02
+    - file: TheWorldofQuantum03
+    - file: TheWorldofQuantum05
+    - file: TheWorldofQuantum04
+  - caption: Quantum Computing
+    numbered: false
+    chapters: 
+    - file: QuantumComputing01
+    - file: QuantumComputing01b
+    - file: QuantumComputing02
+    - file: QuantumComputing02b
+    - file: QuantumComputing03
+    - file: quantum03
+  - caption: Quantum  Programming
+    chapters:
+    - file: Tutorial00
+    - file: Tutorial01
+    - file: comingsoon
+  - caption: Back Matter
+    chapters:
+    - file: QuantumGlossary
+    - file: about
+    
+    
