@@ -461,29 +461,29 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Photo Credit:iStock</p>
 </aside>
 <p>Previously, we looked at <strong>how to represent the state of a qubit</strong>.
-<em>Now</em>, we’d like to discuss <strong>how to actually do computation with quantum systems</strong>. <br> Some questions we’d like to look at are:</p>
+Now, we’d like to discuss <strong>how to actually do computation with quantum systems</strong>. <br> Some questions we’d like to look at are:</p>
 <ul class="simple">
 <li><p>What does it mean to compute with quantum systems?</p></li>
-<li><p>What <em>exactly</em> is be a qubit?</p></li>
+<li><p>What <em>exactly</em> is a qubit?</p></li>
 <li><p>Which <em>physical systems</em> that show quantum behavior than can be used for Quantum Computing?</p></li>
 <li><p><strong>Do Quantum Computers actually exist</strong>?</p></li>
 </ul>
 <p>Before we jump into the following sections, let’s clear up <em>once and for all</em> the last one question.<br></p>
-<p><em><strong>Yes! Quantum computers exist!</strong></em>   Moreover, later on in this book we’ll cover how to access a Quantum computer and program one with Cloud computing.   <em>But for now</em>, let’s answer the essential questions.</p>
+<p><strong>Yes! Quantum computers exist!</strong>   Moreover, later on in this book we’ll cover how to access a Quantum computer and program one with Cloud computing.   But for now, let’s answer the essential questions.</p>
 <p> </p>
 <section id="the-ingredients-for-quantum-computation-how-it-works">
 <h2>The Ingredients for Quantum Computation &amp; How It Works<a class="headerlink" href="#the-ingredients-for-quantum-computation-how-it-works" title="Permalink to this headline">¶</a></h2>
 <p> 
-Before we move on to more <em>formal</em> ideas, I’d like to break things down just a little by using <em>an analogy</em>. We’ll call this “<em><strong>Making Lasagna</strong></em>”.</p>
+Before we move on to more <em>formal</em> ideas, I’d like to break things down just a little by using <em>an analogy</em>. We’ll call this “<strong>Making Lasagna</strong>”.</p>
 <p>In order to make lasagna, we first need lasagne pasta. We’d need other ingredients too, but we wouldn’t be calling it lasagna without the pasta.  <em>Next</em>, we need a recipe on how to make the lasagna. Once we’ve found a good one, we can follow the recipe and make the lasagna.  When we’re done, we have to <em>taste</em> the lasagna to see that our technique worked well.</p>
 <p><em>Believe it or not</em>, Quantum Computation follows a similar pattern.</p>
 <ol class="simple">
 <li><p>First, we need <strong>qubits</strong> as these are the building blocks of Quantum Computing.</p></li>
 <li><p>Next, we need <strong>a set of instructions</strong> for a doing <strong>a particular task</strong> with our qubits. This <em>set of instructions</em> is called an <strong>algorithm</strong>.</p></li>
 <li><p>We then need to actually <em>do things</em> with our qubits by following the instructions of the quantum algorithm. This is what we call the <em>design and execution</em> of a <strong>quantum circuit</strong>.</p></li>
-<li><p>Finally, it would not make any sense to do all the previous steps withoug finding out the results. This is the <strong>measurement</strong> of our quantum system.</p></li>
+<li><p>Finally, it would not make any sense to do all the previous steps without finding out the results. This is the <strong>measurement</strong> of our quantum system.</p></li>
 </ol>
-<p> <em><strong>Let’s pull this all together now with the ideas that what we’ve learnt in <a class="reference internal" href="TheWorldofQuantum00.html#quantum-versus"><span class="std std-ref">Quantum vs Classical</span></a></strong></em>.</p>
+<p> <strong>Let’s pull this all together now with the ideas that what we’ve learnt in <a class="reference internal" href="TheWorldofQuantum00.html#quantum-versus"><span class="std std-ref">Quantum vs Classical</span></a></strong>.</p>
 <p>The result upon measurement gives us  <strong>a final state</strong> of the quantum system after the algorithm has been applied.<br>
 This directly tells us the impact that the algorithm has had on the system.<br>
 <strong>Our answer</strong> to a problem/task (for which we have formulated the <strong>algorithm</strong>) is the <strong>quantum information</strong> revealed by the measured state.<br>
@@ -498,8 +498,7 @@ In many cases, we need to <strong>repeat</strong> the measurement a few times to
 <p class="admonition-title">Important</p>
 <p>Remember that <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> can be complex numbers, so they will not actually be 25% and 75%. But, they will have values that reflect this ratio between them.</p>
 </div>
-<p> </p>
-<p><em>That’s how Quantum Computing works</em>.<br>
+<p>That’s how Quantum Computing works.<br>
 We apply an algorithm for a particular problem or task in the form of some circuit being done on a quantum system. And then we measure the quantum system to see how the algorithm/circuit has taken effect. The final state or states (when we measure multiple times) gives us the quantum information that we need for the problem/task.</p>
 </section>
 <section id="criteria-for-making-a-quantum-computer">
@@ -519,8 +518,8 @@ Being able to give the qubit an initial state is fundamental for a functional qu
 <section id="scalability">
 <h3>Scalability<a class="headerlink" href="#scalability" title="Permalink to this headline">¶</a></h3>
 <p><em>Scalability</em> refers to  the ability of a proposed method to develop into a full-size computer, with enough operational qubits to be the capable and powerful devices that we envision quantum computers can be.
-If our qubits cannot be controlled or measured accurately, <em>or</em> if they cannot “<em>stay quantum</em>” for a long enough time, then there’s a very low chance of scalability.
-<em>Overall</em>, scalability depends on the <em>nature</em> of the qubit system, and the level of <em>engineering</em> required to manipulate/control the qubits in a defined manner.</p>
+If our qubits cannot be controlled or measured accurately, <em>or</em> if they cannot “stay quantum” for a long enough time, then there’s a very low chance of scalability.
+Overall, scalability depends on the <em>nature</em> of the qubit system, and the level of <em>engineering</em> required to manipulate/control the qubits in a defined manner.</p>
 </section>
 </section>
 </section>
