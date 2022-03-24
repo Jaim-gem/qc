@@ -34,8 +34,4 @@ html:
 launch_buttons:
   notebook_interface: "classic"
   binderhub_url: "https://mybinder.org/v2/gh/Jaim-gem/qc/gh-pages?labpath=%2F_sources" 
-<<<<<<< HEAD
   thebe: true
-=======
-  thebe: true
->>>>>>> e85cce6d0a12deaf5b68e1f8bac26a163ae2e869
