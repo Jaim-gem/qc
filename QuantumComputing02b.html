@@ -445,22 +445,17 @@ const thebe_selector_output = ".output, .cell_output"
 Credit: Science Magazine</p>
 </aside>
 <p> </p>
-<p>In the last section, we covered <em>quite a lot</em> by looking at what we need to make a quantum computer and the steps of quantum computation. In this section, we’ll look at some types of Quantum Computing and quantum computers.</p>
-<p> </p>
+<p>In the last section, we covered quite a lot by looking at what we need to make a quantum computer and the steps of quantum computation. In this section, we’ll look at different types of Quantum Computing and quantum computers.</p>
 <section id="approaches-to-quantum-computing">
 <h2>Approaches to Quantum Computing<a class="headerlink" href="#approaches-to-quantum-computing" title="Permalink to this headline">¶</a></h2>
-<p>I will briefly mention here some <strong>approaches</strong> to Quantum Computing.  We will not go into too much detail. <br>
-An <em>approach</em> is simply a way to do computation on a quantum system. It is the way to manipulate, control and measure the quantum system.
- 
-The two main approaches that one hears about a lot are: (1)  <strong>Gate-based Quantum Computing</strong> and (2)  <strong>Adiabatic Quantum Computing</strong>.</p>
+<p>I will briefly mention here some <strong>approaches</strong> to Quantum Computing. We will not go into too much detail. <br>
+An <em>approach</em> is simply a way to do computation on a quantum system. It is the way to manipulate, control and measure the quantum system. The two main approaches that one hears about a lot are: (1)  <strong>Gate-based Quantum Computing</strong> and (2)  <strong>Adiabatic Quantum Computing</strong>.</p>
 <p>The <strong>Gate-based approach</strong> is very much similar to how we do classical computation, with the exception being that we use qubits instead of classical bits. Once we have our qubits, we apply our “gate operations” also known as our “circuit”.</p>
-<p>The <strong>Adiabatic approach</strong> is less obvious, but relies on the <strong>Adiabatic theorem</strong> in Physics. The Adiabatic approach tells us to initialize our qubits in a particular <em>low-energy state</em> and then <strong>slowly</strong> apply changes to the qubits’ environment. We are still <em>doing things</em> to the qubits but in a more precautious manner. The idea is that if we do it slowly enough and in the right way, the qubits don’t “budge too much” energy-wise, and so that their final measured state most likely represents the lowest energy state of some <em>complex</em> problem.</p>
-<p>The Adiabatic approach is therefore very applicable to finding the best solution(s) to an <strong>Optimization</strong>-type problem.
- </p>
+<p>The <strong>Adiabatic approach</strong> is less obvious, but relies on the <strong>Adiabatic theorem</strong> in Physics. The Adiabatic approach tells us to initialize our qubits in a particular <em>low-energy state</em> and then <strong>slowly</strong> apply changes to the qubits’ environment. We are still ‘doing things’ to the qubits but in a more precautious manner. The changes we are apply are related to a complex problem for which we want an answer. The idea is that if we bring about these changes slowly enough and in the right way, the qubits won’t “budge too much” energy-wise, and their final measured state most likely represents the lowest energy state of the complex problem. The Adiabatic approach is therefore very applicable to finding the best solution(s) to an <strong>Optimization</strong>-type problem.</p>
 </section>
 <section id="types-of-qubits">
 <h2>Types of Qubits<a class="headerlink" href="#types-of-qubits" title="Permalink to this headline">¶</a></h2>
-<p>Apart from the specific approach used by a Quantum computer, we can differentiate types of Quantum computers according to the quantum objects that are used as qubits. Here are some of the main ones:</p>
+<p>Apart from the specific approach used by a Quantum computer, we can differentiate the types of quantum computers according to what are used as qubits. Here are some of the main ones:</p>
 <ul class="simple">
 <li><p><strong>Superconducting qubits</strong>: A small electronic circuit containing a <em>Josephson</em> junction (which is made by thin non-superconducting material placed between two superconducting materials). The circuit operates like an <em>artificial atom</em> where electromagnetic radiation can be used to drive transitions between two energy-level states.</p></li>
 <li><p><strong>Photonic qubits</strong>: Quanta of light are called photons. Photonic qubits are therefore particles of light produced from a <em>coherent light source</em> (a laser).</p></li>
@@ -484,10 +479,10 @@ And here’s another one…</p>
 <img alt="dwavecomputer" src="https://static.scientificamerican.com/sciam/cache/file/ABFCEF88-8ADE-4212-BE44ABB88792D119_source.jpg?w=590&amp;h=800&amp;E979DE21-21CD-4B2F-980E3DFB40CA082B" />
 Credit: D-wave</p>
 </div>
-<p>Quantum computers are large devices made to keep qubits in a <em>very cold</em> and <em>controlled</em> environment in order to separate them from anything that can disturb them and make them lose their “quantumness”. <strong>The temperatures in a quantum computer can be colder than Outerspace!</strong>
-The actual <strong>qubits</strong> are located in a <strong>quantum chip</strong> also called a <strong>quantum processing unit (QPU)</strong> inside the computer and small enough to fit into the palm of your hand.<br />
+<p>Quantum computers are large devices made to keep qubits in a very cold and controlled environment in order to separate them from anything that can disturb them and make them lose their “quantumness”. <strong>The temperatures in a quantum computer can be colder than Outerspace!</strong>
+The actual ‘qubits’ are located in a <strong>quantum chip</strong> also called a <strong>quantum processing unit (QPU)</strong> inside the computer. The chip is small enough to fit into the palm of your hand.<br />
  </p>
-<p>Here’s a couple quantum chips for you to look at.</p>
+<p>Here are a couple quantum chips for you to look at.</p>
 <div class="toggle docutils container">
 <p><img alt="ibmchip" src="https://www.ibm.com/quantum-computing/_nuxt/img/16d424e.jpg" />
 Credit: IBM</p>
@@ -497,12 +492,11 @@ Credit: D-Wave</p>
 </section>
 <section id="which-companies-make-quantum-computers">
 <h2>Which Companies Make Quantum Computers?<a class="headerlink" href="#which-companies-make-quantum-computers" title="Permalink to this headline">¶</a></h2>
-<p> </p>
 <p>Companies that build quantum computers tend to specialize on using one particular approach to Quantum Computing and one type of qubit. Here are some Quantum Computing companies and the types of quantum computers they have:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.ibm.com/quantum-computing/"><strong>IBM</strong></a> looks into Gate-based quantum computers and use <strong>superconducting qubits</strong>.</p></li>
 <li><p><a class="reference external" href="https://quantumai.google/"><strong>Google</strong></a> also applies the Gate-based approach with <strong>superconducting qubits</strong>.</p></li>
-<li><p><a class="reference external" href="https://www.xanadu.ai/"><strong>Xanadu</strong></a> makes <strong>photonic</strong> quantum computers with <em>squeezed light</em>. Below is a <em>cool video</em> on how their <strong>photonic chips</strong> work.</p></li>
+<li><p><a class="reference external" href="https://www.xanadu.ai/"><strong>Xanadu</strong></a> makes <strong>photonic</strong> quantum computers with <em>squeezed light</em>. Below is a cool video on how their <strong>photonic chips</strong> work.</p></li>
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -540,23 +534,23 @@ Credit: D-Wave</p>
 <section class="tex2jax_ignore mathjax_ignore" id="short-quiz">
 <h1>Short Quiz<a class="headerlink" href="#short-quiz" title="Permalink to this headline">¶</a></h1>
 <p><em>Try to answer the following questions on your own, then click to reveal.</em></p>
-<p><strong>What’s the name of the Quantum Computing approach that is suitable for optimization-type problems?</strong></p>
+<p><em>What’s the name of the Quantum Computing approach that is suitable for optimization-type problems?</em></p>
 <div class="toggle docutils container">
-<p><strong>Adiabatic Quantum Computing</strong> relies on the Adiabatic theorem in Physics, which tells us that if we start off in a <strong>low-energy</strong> state for some simple problem and <em>slowly</em> evolve our environment to a more difficult problem, then our system will end-up in a low-energy state for the more difficult problem. This type of Quantum Computing is suitable for optimization problems.</p>
+<p><strong>Adiabatic Quantum Computing</strong> relies on the Adiabatic theorem in Physics, which tells us that if we start off in a low-energy state for some simple problem and slowly evolve our environment to a more difficult problem, then our system will end-up in a low-energy state for the more difficult problem. This type of Quantum Computing is suitable for optimization problems.</p>
 </div>
-<p><strong>Which types of qubits are trapped between interfering laser beams?</strong></p>
+<p><em>Which types of qubits are trapped between interfering laser beams?</em></p>
 <div class="toggle docutils container">
 <p>Cold atoms are trapped in the <em>wells</em> of an optical lattice. <em>See Header Image</em>.</p>
 </div>
-<p><strong>Which types of qubits can be controlled by electric and magnetic fields?</strong></p>
+<p><em>Which types of qubits can be controlled by electric and magnetic fields?</em></p>
 <div class="toggle docutils container">
-<p>Trapped ions! Ions are charged atoms and <em>being charged</em> means that they can be controlled with electric and magnetic fields.</p>
+<p>Trapped ions! Ions are charged atoms and being charged means that they can be controlled with electric and magnetic fields.</p>
 </div>
-<p><strong>Which types of qubits behave like artificial atoms?</strong></p>
+<p><em>Which types of qubits behave like artificial atoms?</em></p>
 <div class="toggle docutils container">
 <p>Superconducting qubits are actually small electronic circuits made using a special circuit element called a <em>Josephson junction</em>. The circuit behaves like an artificial atom with different <strong>energy states</strong>. By using electromagnetic radiation, we can control the transitions between these states.</p>
 </div>
-<p><strong>Which types of qubits are particles of light</strong></p>
+<p><em>Which types of qubits are particles of light?</em></p>
 <div class="toggle docutils container">
 <p>Photonic qubits! The word “photonic” is from “photon”, which is a particle of light.</p>
 </div>

@@ -1,4 +1,4 @@
-# Tutorial B: Multiple Qubit Operations and Quantum Circuits
+# Tutorial C: Multiple Qubit Operations and Quantum Circuits
 ## **Coming Soon!** 
 
 &nbsp; 

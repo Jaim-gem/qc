@@ -469,6 +469,7 @@ Now, we’d like to discuss <em>how to actually do computation with quantum syst
 <li><p><em>Do Quantum Computers actually exist?</em></p></li>
 </ul>
 <p>Before we jump into the following sections, let’s clear up once and for all the last one question. <strong>Yes! Quantum computers exist!</strong> Moreover, later on in this book we’ll cover how to access a quantum computer and program one through the “cloud”. But for now, let’s answer the essential questions.</p>
+<br>
 <section id="the-ingredients-for-quantum-computation-how-it-works">
 <h2>The Ingredients for Quantum Computation &amp; How It Works<a class="headerlink" href="#the-ingredients-for-quantum-computation-how-it-works" title="Permalink to this headline">¶</a></h2>
 <p>Before we move on to more formal ideas, I’d like to break things down just a little by using an analogy. We’ll call this <strong>“Making Lasagne”</strong>.</p>
@@ -485,7 +486,7 @@ Now, we’d like to discuss <em>how to actually do computation with quantum syst
 <p>This is like our thought experiment with <a class="reference internal" href="TheWorldofQuantum05.html#schrod-refer"><span class="std std-ref">Schrodinger’s Cat</span></a>. In order to know what the superposition was before measuring, we need to see how many times we get a particular result. If we get one state 25% of the time and the other state 75% of the time, then our wave-function could have been something like this…</p>
 <div class="math notranslate nohighlight">
 \[
-|\Psi\rangle=\alpha_{25\%}|state_1\rangle + \beta_{75\%}|state_2\rangle
+|\Psi\rangle=\alpha_{25\%}|state 1\rangle + \beta_{75\%}|state 2\rangle
 \]</div>
 <p> </p>
 <div class="admonition important">
@@ -493,33 +494,31 @@ Now, we’d like to discuss <em>how to actually do computation with quantum syst
 <p>Remember that <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> can be complex numbers, so they will not actually be 25% and 75%. But, they will have values that reflect this ratio between them.</p>
 </div>
 <p>This is how Quantum Computing works. We apply an algorithm for a particular problem or task in the form of some circuit being done on a quantum system, and then we measure the quantum system to see how the algorithm/circuit has taken effect. The final state or states (when we measure multiple times) gives us the quantum information that we need to answer the problem/task.</p>
+<br>
 </section>
 <section id="criteria-for-making-a-quantum-computer">
 <h2>Criteria for Making a Quantum Computer<a class="headerlink" href="#criteria-for-making-a-quantum-computer" title="Permalink to this headline">¶</a></h2>
-<p>The “necessary” criteria for a functional and effective quantum computer was proposed by theoretical Physicist <em>David P. DiVincenzo</em>. There are seven (7), but here we will briefly outline the main points.</p>
+<p>The necessary criteria for a functional and effective quantum computer were proposed by theoretical Physicist <em>David P. DiVincenzo</em>. There are seven (7), but here we will briefly outline the main points.</p>
 <section id="controllable-quantum-systems">
 <h3>Controllable Quantum Systems<a class="headerlink" href="#controllable-quantum-systems" title="Permalink to this headline">¶</a></h3>
-<p>We need to be able to control our qubits to a good extent without collapsing the system, before <em>we need</em> to collapse the system.</p>
-<p>The only way we can know that the final measured state is a direct result of the applied circuit, is if we can be certain (or near certain) of the system’s initial state (without measuring). This is what is called <strong>initial state preparation</strong>.
-Being able to give the qubit an initial state is fundamental for a functional quantum computer.If the qubit states were initialized randomly, then we will never be able to tell for certain how the circuit affected it.</p>
+<p>We need to be able to control our qubits to a good extent without collapsing the system before <em>we need</em> to collapse the system. The only way we can know that the final measured state is a direct result of the applied circuit, is if we can be certain (or near certain) of the system’s initial state (without measuring). This is what is called <strong>initial state preparation</strong>. Being able to give the qubit an initial state is fundamental for a functional quantum computer. If the qubit states were initialized randomly, then we will never be able to tell for certain how the circuit affected it.</p>
 <p>The second point is the ability and the extent to which we can influence the state of the quantum system with suitable operations. How easy is it to carry out <em>any circuit</em> on this quantum system?</p>
 </section>
 <section id="reliable-qubit-measurement">
 <h3>Reliable Qubit Measurement<a class="headerlink" href="#reliable-qubit-measurement" title="Permalink to this headline">¶</a></h3>
-<p>We must be able to accurately determine what the final state of the qubit is when the wave-function collapses. How accurate is our measurement approach for reading the state of the qubit in this system, and what are the chances of getting an error in the reading? Are our devices <em>sensitive enough</em> to distinguish between the two measurable qubit states?  The answers to these questions are essential for deciding whether a proposed quantum computational method is reliable, and should be developed further.</p>
+<p>We must be able to accurately determine what the final state of the qubit is when the wave-function collapses. How accurate is our measurement approach for reading the state of the qubit in this system, and what are the chances of getting an error in the reading? Are our devices <em>sensitive enough</em> to distinguish between the two measurable qubit states? The answers to these questions are essential for deciding whether a proposed quantum computational method is reliable, and should be developed further.</p>
 </section>
 <section id="scalability">
 <h3>Scalability<a class="headerlink" href="#scalability" title="Permalink to this headline">¶</a></h3>
 <p><em>Scalability</em> refers to  the ability of a proposed method to develop into a full-size computer, with enough operational qubits to be the capable and powerful devices that we envision quantum computers can be.
-If our qubits cannot be controlled or measured accurately, <em>or</em> if they cannot “stay quantum” for a long enough time, then there’s a very low chance of scalability.
-Overall, scalability depends on the <em>nature</em> of the qubit system, and the level of <em>engineering</em> required to manipulate/control the qubits in a defined manner.</p>
+If our qubits cannot be controlled or measured accurately, or if they cannot “stay quantum” for a long enough time, then there’s a very low chance of scalability. Overall, scalability depends on the <em>nature</em> of the qubit system and the level of <em>engineering</em> required to manipulate/control the qubits in a defined manner.</p>
 </section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="short-quiz">
 <h1>Short Quiz<a class="headerlink" href="#short-quiz" title="Permalink to this headline">¶</a></h1>
 <p><em>Try to answer the following questions on your own, then click to reveal.</em></p>
-<p><strong>Do you remember the steps of Quantum Computing?</strong></p>
+<p><em>Do you remember the steps of Quantum Computing?</em></p>
 <div class="toggle docutils container">
 <ol class="simple">
 <li><p><strong>Qubits</strong> - We need qubits! These are the ingredients!</p></li>
@@ -528,11 +527,11 @@ Overall, scalability depends on the <em>nature</em> of the qubit system, and the
 <li><p><strong>Measurement</strong> - Finding out how everything turned out!</p></li>
 </ol>
 </div>
-<p><strong>Why do we make multiple measurements of a quantum circuit?</strong></p>
+<p><em>Why do we make multiple measurements of a quantum circuit?</em></p>
 <div class="toggle docutils container">
 <p>The final states that we observe when we measure a quantum system is <strong>probabilistic</strong>. In order to get a full picture of the quantum state prior to measurement, we need to evaluate the probabilities for each measurable state. These probabilities will give us an idea of the quantum wave-function prior to its collapse.</p>
 </div>
-<p><strong>What makes a proposed method for Quantum Computation scalable?</strong></p>
+<p><em>What makes a proposed method for Quantum Computation scalable?</em></p>
 <div class="toggle docutils container">
 <p>Scalability is dependent on the <strong>nature (type) of the qubits</strong>, whether we can <strong>control/manipulate the qubits reliably</strong>, the ability to <strong>prepare an initial state of the qubit</strong> and to <strong>accurately measure its final state</strong>. Scalability also takes into consideration the level of difficulty in <strong>engineering</strong> the physical circuitry for doing anything with the qubits.</p>
 </div>
