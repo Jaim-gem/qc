@@ -421,69 +421,57 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-{margin}A notranslate"><div class="highlight"><pre><span></span>Photo Credit: © Jackie Niam – stock.adobe.com
 </pre></div>
 </div>
-<p>On the last page, we spoke of <strong>bits</strong> that exhibited <em>quantum</em> properties.
-Do you remember what a <em>bit</em> is?  </p>
-<p>We said that <em>bits</em> were the basic units of <strong>information</strong>.   We can therefore reason that a <strong>quantum bit</strong>, also called a <strong>qubit</strong>, is the basic unit of <strong>quantum information</strong>.
+<p>On the last page, we spoke of bits that exhibited quantum properties. Do you remember what a <em>bit</em> is?</p>
+<p>We said that bits were the basic units of information. We can therefore reason that a <strong>quantum bit</strong>, also called a <strong>qubit</strong>, is the basic unit of <strong>quantum information</strong>.
  </p>
-<p>And what is <em>Quantum Information</em>?  To put it simply, <strong>Quantum Information</strong> is the information presented by the <strong>state</strong> of a quantum object or system.</p>
+<p>And what is Quantum Information? To put it simply, Quantum Information is the information presented by the state of a quantum object or system.</p>
 <p>From <a class="reference internal" href="TheWorldofQuantum00.html#quantum-versus"><span class="std std-ref">Quantum vs Classical</span></a>, we learnt that a <strong>state</strong> is simply a description of something.
-Just as the state of a <em>classical</em> bit can be <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>, the state of a qubit may also be described.  The <em>symbol</em> used to denote the state of a qubit is this:    <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span> .   This is the Greek letter <em>Psi</em> (<em>…the ‘p’ is silent</em>).</p>
-<p>So whenever you see … <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span>… you know that what follows is a description of the state of a quantum system.
+Just as the state of a classical bit can be <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>, the state of a qubit may also be described.   The symbol used to represent the state of a qubit is this:    <span class="math notranslate nohighlight">\(|\Psi\rangle\)</span> .   This is the Greek letter <em>Psi</em> …the ‘p’ is silent.  So whenever you see ‘<span class="math notranslate nohighlight">\(|\Psi\rangle\)</span>’, you know that whatever follows is a description of the state of some quantum system.
  </p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="writing-the-state-of-a-qubit">
 <h1>Writing the State of A Qubit<a class="headerlink" href="#writing-the-state-of-a-qubit" title="Permalink to this headline">¶</a></h1>
-<p> </p>
-<p>The most general way to describe the state of a qubit is as a superposition of the state “0” and the state “1”.</p>
-<p>In Quantum Mechanics, we represent the state “0” as <span class="math notranslate nohighlight">\(|0\rangle\)</span> and the state “1” as <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p>
-<p>We can then write the state of a qubit as:
- </p>
+<p>The most general way to describe the state of a qubit is as a superposition of the state “0” and the state “1”. In Quantum Mechanics, we represent the state “0” as <span class="math notranslate nohighlight">\(|0\rangle\)</span> and the state “1” as <span class="math notranslate nohighlight">\(|1\rangle\)</span>.  We can then write the state of a qubit as:</p>
 <div class="math notranslate nohighlight">
 \[
 |\Psi\rangle= \alpha|0\rangle + \beta|1\rangle 
 \]</div>
-<p>But what is <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>?  <em>Alpha</em> written as <span class="math notranslate nohighlight">\(\alpha\)</span> is the first letter in the Greek alphabet, whereas <em>beta</em> written as <span class="math notranslate nohighlight">\(\beta\)</span> is the second letter.</p>
-<p>With regards to qubits, <span class="math notranslate nohighlight">\(\alpha\)</span> is a number that tells <em>how much</em> of the qubit is in state <span class="math notranslate nohighlight">\(|0\rangle\)</span>, annd <span class="math notranslate nohighlight">\(\beta\)</span> is a number that tells <em>how much</em> of the qubit is in state <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p>
-<p><strong>For example</strong>, if a qubit is <em>entirely</em> in the state <span class="math notranslate nohighlight">\(|1\rangle\)</span>, then <span class="math notranslate nohighlight">\(\beta=1\)</span>, which makes <span class="math notranslate nohighlight">\(\alpha=0\)</span>.</p>
+<p>But what is <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> ?
+<em>Alpha</em> written as <span class="math notranslate nohighlight">\(\alpha\)</span> is the first letter in the Greek alphabet, whereas <em>beta</em> written as <span class="math notranslate nohighlight">\(\beta\)</span> is the second letter. With regards to qubits, <span class="math notranslate nohighlight">\(\alpha\)</span> is a number that tells how much of the qubit is in state <span class="math notranslate nohighlight">\(|0\rangle\)</span>, and <span class="math notranslate nohighlight">\(\beta\)</span> is a number that tells how much of the qubit is in state <span class="math notranslate nohighlight">\(|1\rangle\)</span>. For example, if a qubit is <em>entirely</em> in the state <span class="math notranslate nohighlight">\(|1\rangle\)</span> then <span class="math notranslate nohighlight">\(\beta=1\)</span>, which makes <span class="math notranslate nohighlight">\(\alpha=0\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are not usually ordinary numbers like what we are familiar with, i.e. 0,1,2,3… They are what we call <strong>complex</strong> numbers, or <strong>imaginary</strong> numbers. Complex numbers are the most general types of numbers and we can use these numbers to represent things in <em>multiple dimensions</em> (…instead of the ordinary one-dimensional number line), and to give information on <em>angles</em>.</p>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are not usually ordinary numbers like what we are familiar with, i.e. 0,1,2,3… They are what we call <strong>complex</strong> numbers, or <strong>imaginary</strong> numbers. Complex numbers are the most general types of numbers and we can use these numbers to represent things in <em>multiple dimensions</em> instead of the ordinary one-dimensional number line. It is also gives information on the angles between the real and complex parts of a vector.</p>
 <p>If you wish to learn more about complex numbers, there’s an excellent video series by <em>Welch labs</em> on YouTube that you can check out: <a class="reference external" href="https://www.youtube.com/watch?v=T647CGsuOVU">Imaginary Numbers Are Real</a></p>
 </div>
-<p> </p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="representing-a-qubit">
 <h1>Representing A Qubit<a class="headerlink" href="#representing-a-qubit" title="Permalink to this headline">¶</a></h1>
-<p> </p>
-<p>We can even <strong>draw</strong> the state of a qubit, using what is called a <strong>Bloch sphere</strong>.<br></p>
+<p>We can even draw the state of a qubit using what is known as the <strong>Bloch sphere</strong>.<br></p>
 <a class="reference internal image-reference" href="_images/bloch.jpg"><img alt="blo" class="align-center" src="_images/bloch.jpg" style="width: 600px;" /></a>
 <div class="highlight-{margin}Bloch notranslate"><div class="highlight"><pre><span></span>Photo Credit: VectorStock
 </pre></div>
 </div>
-<p>With the Bloch sphere, the qubit’s state is shown as an <em>arrow</em> that points to a spot on the sphere’s surface.   The two angles that are used to make the arrow point in that particular direction also allows us to characterize the qubit’s state.</p>
-<p><strong>For example</strong>, if a qubit is in the state  <span class="math notranslate nohighlight">\(|0\rangle\)</span>, it points to the <em>north pole</em> or to the top of the Bloch sphere. Since the north pole is always the starting point, the two angles needed to make the qubit point in that direction are both <span class="math notranslate nohighlight">\(0^\circ\)</span>.</p>
-<p>If a qubit is in the state <span class="math notranslate nohighlight">\(|1\rangle\)</span>, then it points to the <em>south pole</em> or the bottom of the Bloch sphere, and one of the angles needed to make the qubit point in that direction is <span class="math notranslate nohighlight">\(180^\circ\)</span>, while the other is still <span class="math notranslate nohighlight">\(0^\circ\)</span>.</p>
-<p> </p>
-<p><strong>Let’s summarize.</strong></p>
+<p>With the Bloch sphere, the qubit’s state is shown as an arrow that points to a spot on the sphere’s surface. The two angles that are used to make the arrow point in that particular direction also allows us to characterize the qubit’s state, i.e. it tells us <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>For example, if a qubit is in the state  <span class="math notranslate nohighlight">\(|0\rangle\)</span>, it points to the <em>north pole</em> or to the top of the Bloch sphere. Since the north pole is always the starting point, the two angles needed to make the qubit point in that direction are both <span class="math notranslate nohighlight">\(0^\circ\)</span>.</p>
+<p>If a qubit is in the state <span class="math notranslate nohighlight">\(|1\rangle\)</span>, then it points to the <em>south pole</em> or the bottom of the Bloch sphere, and one of the angles needed to make the qubit point in that direction becomes <span class="math notranslate nohighlight">\(180^\circ\)</span>.</p>
+<p><em>Let’s summarize.</em></p>
 <ul class="simple">
-<li><p>A <strong>Qubit</strong> is the basic unit of quantum information.</p></li>
-<li><p><strong>Quantum Information</strong> is what we know the state of a quantum object or a quantum system to be.</p></li>
-<li><p>The general way <em>to write</em> the state of a qubit is:    <span class="math notranslate nohighlight">\(|\Psi\rangle=\alpha|0\rangle+\beta|1\rangle\)</span>.</p></li>
+<li><p>A qubit is the basic unit of quantum information.</p></li>
+<li><p>Quantum Information is what we know of the state of a quantum object or a quantum system.</p></li>
+<li><p>The most general way to write the state of a qubit is:    <span class="math notranslate nohighlight">\(|\Psi\rangle=\alpha|0\rangle+\beta|1\rangle\)</span>.</p></li>
 <li><p>The numbers <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> indicate how much of the qubit is in state <span class="math notranslate nohighlight">\(|0\rangle\)</span> and how much is in state <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p></li>
-<li><p>The way <em>to draw</em> the state of a qubit is with the <strong>Bloch sphere</strong>. The <em>direction</em> that the arrow points to represents the qubit’s state.</p></li>
-<li><p>We can note this direction with <strong>angles</strong>, as well as with the <em>complex numbers</em> <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>.</p></li>
+<li><p>One way to draw the state of a qubit is with the <strong>Bloch sphere</strong>. The direction that the arrow points denotes the qubit’s state.</p></li>
+<li><p>We can note this direction with <strong>angles</strong> in addition to the <em>complex numbers</em> <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>.</p></li>
 </ul>
-<p> </p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="short-quiz">
 <h1>Short Quiz<a class="headerlink" href="#short-quiz" title="Permalink to this headline">¶</a></h1>
 <p><em>Try to answer the following question on your own, then click to reveal the answer.</em></p>
-<p> 
-<strong>Is <span class="math notranslate nohighlight">\(|\Psi\rangle=|0\rangle\)</span> a superposed state?</strong></p>
+<p><em>Is <span class="math notranslate nohighlight">\(|\Psi\rangle=|0\rangle\)</span> a superposed state?</em></p>
 <div class="toggle docutils container">
 <p>No. This is not a superposed state.</p>
-<p>Remember, that a qubit is in superposition if it is in some combination of “0” or “1”.</p>
-<p>If the qubit is only in the “0” state, then it is not in superposition.</p>
+<p>Remember that a qubit is in superposition if it is in some combination of “0” and “1”.</p>
+<p>If the qubit is only in the “0” state then it is not in superposition.</p>
 </div>
 <p> </p>
 </section>
