@@ -28,6 +28,7 @@ parts:
     chapters:
     - file: Tutorial00
     - file: Tutorial01
+    - file: Tutorial02
     - file: comingsoon
   - caption: Back Matter
     chapters:
