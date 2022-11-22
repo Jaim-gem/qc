@@ -3,3 +3,4 @@ matplotlib
 numpy
 qiskit
 pylatexenc
+ibm_quantum_widgets
