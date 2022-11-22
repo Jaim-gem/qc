@@ -14,10 +14,11 @@ As we know already, in order to do Quantum computation we need to write a *set o
 
 In the following tutorial, we give a gentle introduction to Quantum programming in the **Python** programming language using *Qiskit*.
 
-The tutorial is split into three sections: **Tutorial A**, **Tutorial B** and **Tutorial C**.<br>
+The tutorial is split into multiple sections: **Tutorial A**, **Tutorial B**, **Tutorial C** and **Tutorial D**.<br>
+
 In **Tutorial A**, we cover the absolute fundamentals of quantum programming with *Qiskit* with a single qubit. <br>
 In **Tutorial B**, we add some more detail on single qubit operations.<br>
-In **Tutorial C**, we explore a little further with multi-qubit quantum circuits to demonstrate just how *cool* Quantum is. (Coming Soon)
+In **Tutorial C**, we begin experimenting with multi-qubit circuits.<br>  In **Tutorial D**, we explore with multi-qubit gate operations and create interesting circuits which demonstrate just how *cool* Quantum is. (Coming Soon)
 
 
 ## **Tips**

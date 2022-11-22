@@ -29,7 +29,9 @@ parts:
     - file: Tutorial00
     - file: Tutorial01
     - file: Tutorial02
+    - file: Tutorial03
     - file: comingsoon
+    - file: CircuitComposer
   - caption: Back Matter
     chapters:
     - file: QuantumGlossary

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial C: Multiple Qubit Operations and Quantum Circuits &#8212; World of Tech</title>
+    <title>Tutorial C: Multi-Qubit Circuits &#8212; World of Tech</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,9 +52,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial D: Multi-Qubit Operations &amp; Demonstrating Quantum Mechanics" href="comingsoon.html" />
+    <link rel="prev" title="Tutorial B: More Single Qubit Gates" href="Tutorial02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -191,7 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
   Quantum  Programming
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Tutorial00.html">
    <strong>
@@ -209,9 +213,19 @@ const thebe_selector_output = ".output, .cell_output"
    Tutorial B: More Single Qubit Gates
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tutorial C: Multi-Qubit Circuits
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="comingsoon.html">
-   Tutorial C: Multiple Qubit Operations and Quantum Circuits
+   Tutorial D: Multi-Qubit Operations &amp; Demonstrating Quantum Mechanics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CircuitComposer.html">
+   IBM Quantum Lab: Circuit Composer
   </a>
  </li>
 </ul>
@@ -347,9 +361,43 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectives">
-   Objectives:
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tutorial C: Multi-Qubit Circuits
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectives">
+     Objectives:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#building-a-multi-qubit-circuit">
+     1. Building a Multi-Qubit Circuit
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-the-same-gates-to-all-qubits">
+     2. Applying the same gates to all qubits.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-circuits">
+     3. Combining circuits
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-sampling-of-bitstrings">
+     4. Random Sampling of Bitstrings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-your-own-code">
+   <strong>
+    Try Your Own Code
+   </strong>
   </a>
  </li>
 </ul>
@@ -362,7 +410,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial C: Multiple Qubit Operations and Quantum Circuits</h1>
+                <h1>Tutorial C: Multi-Qubit Circuits</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -372,9 +420,43 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#objectives">
-   Objectives:
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Tutorial C: Multi-Qubit Circuits
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectives">
+     Objectives:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#building-a-multi-qubit-circuit">
+     1. Building a Multi-Qubit Circuit
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-the-same-gates-to-all-qubits">
+     2. Applying the same gates to all qubits.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-circuits">
+     3. Combining circuits
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-sampling-of-bitstrings">
+     4. Random Sampling of Bitstrings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-your-own-code">
+   <strong>
+    Try Your Own Code
+   </strong>
   </a>
  </li>
 </ul>
@@ -386,39 +468,220 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-c-multiple-qubit-operations-and-quantum-circuits">
-<h1>Tutorial C: Multiple Qubit Operations and Quantum Circuits<a class="headerlink" href="#tutorial-c-multiple-qubit-operations-and-quantum-circuits" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-c-multi-qubit-circuits">
+<h1>Tutorial C: Multi-Qubit Circuits<a class="headerlink" href="#tutorial-c-multi-qubit-circuits" title="Permalink to this headline">¶</a></h1>
 <p> </p>
 <section id="objectives">
 <h2>Objectives:<a class="headerlink" href="#objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>to explore some properties of Quantum Mechanics with quantum circuits.</p></li>
+<li><p>to create quantum circuits with more than one qubit.</p></li>
+<li><p>to add gates to multiple qubits.</p></li>
+<li><p>to combine circuits.</p></li>
+<li><p>to visualize multi-qubit quantum states.</p></li>
 <li><p>to see how a quantum circuit may allow for computation on multiple “classical” states simultaneously.
  </p></li>
 </ul>
-<p>The circuit composer widget</p>
+<p><strong>Importing Modules</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ibm_quantum_widgets</span> <span class="kn">import</span> <span class="n">CircuitComposer</span>
-<span class="n">editor</span> <span class="o">=</span> <span class="n">CircuitComposer</span><span class="p">()</span>
-<span class="n">editor</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Tutorials A and B, we created quantum circuits comprising a single qubit in order to focus on the action of single-qubit quantum gates and how they alter qubit states.<br></p>
+<p>We shall now look at quantum circuits with more than one qubit.</p>
+</section>
+<section id="building-a-multi-qubit-circuit">
+<h2>1. Building a Multi-Qubit Circuit<a class="headerlink" href="#building-a-multi-qubit-circuit" title="Permalink to this headline">¶</a></h2>
+<p>We use the same <code class="docutils literal notranslate"><span class="pre">QuantumCircuit()</span></code> function. Let’s create a circuit with 3 qubits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">more_qubits</span><span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">more_qubits</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_24320</span><span class="o">/</span><span class="mf">744947246.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">ibm_quantum_widgets</span> <span class="kn">import</span> <span class="n">CircuitComposer</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">editor</span> <span class="o">=</span> <span class="n">CircuitComposer</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">editor</span>
+<img alt="_images/Tutorial03_6_0.png" src="_images/Tutorial03_6_0.png" />
+</div>
+</div>
+<p><strong>Simple!</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We observe that the qubits are numbered starting with ‘0’ so that the 3rd qubit has the index ‘2’.</p>
+</div>
+<p>Now, let’s apply some gates to the qubits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">more_qubits</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>                      <span class="c1"># Apply the x gate to the first qubit </span>
+<span class="n">more_qubits</span><span class="o">.</span><span class="n">ry</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>             <span class="c1"># Apply a rotation-y gate to the second qubit</span>
+<span class="n">more_qubits</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>                      <span class="c1"># Apply an S gate also to the second qubit</span>
+<span class="n">more_qubits</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                      <span class="c1"># Apply a Hadamard gate to the final qubit</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;ibm_quantum_widgets&#39;
+<span class="n">more_qubits</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_8_0.png" src="_images/Tutorial03_8_0.png" />
+</div>
+</div>
+<p>So we’ve created a quantum circuit using 3 qubits and 4 different gates.</p>
+<p>How about if we want to apply the same gate to all qubits?</p>
+</section>
+<section id="applying-the-same-gates-to-all-qubits">
+<h2>2. Applying the same gates to all qubits.<a class="headerlink" href="#applying-the-same-gates-to-all-qubits" title="Permalink to this headline">¶</a></h2>
+<p>We can do this one of two ways. The manual way is simply as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">more_qubits2</span><span class="o">=</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_10_0.png" src="_images/Tutorial03_10_0.png" />
+</div>
+</div>
+<p>The quicker way would be to use a loop. See below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">more_qubits2</span><span class="o">=</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>                       <span class="c1"># For i= 0, 1, 2 </span>
+    <span class="n">more_qubits2</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>                     <span class="c1"># Apply the h gate to the ith qubit</span>
+    <span class="n">more_qubits2</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>                     <span class="c1"># Then apply the s gate to the ith qubit</span>
+
+<span class="n">more_qubits2</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_12_0.png" src="_images/Tutorial03_12_0.png" />
+</div>
+</div>
+<p>We obtain the same circuit by using the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+</section>
+<section id="combining-circuits">
+<h2>3. Combining circuits<a class="headerlink" href="#combining-circuits" title="Permalink to this headline">¶</a></h2>
+<p>We now wish to add the circuit the ‘more_qubits’ circuit after the ‘more_qubits2’ circuit. To do so, we start off with the circuit we’d like to have first, then apply the <code class="docutils literal notranslate"><span class="pre">.compose()</span></code> method. This is demonstrated below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_circuit</span> <span class="o">=</span> <span class="n">more_qubits2</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="n">more_qubits</span><span class="p">)</span>  
+
+<span class="n">combined_circuit</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_15_0.png" src="_images/Tutorial03_15_0.png" />
+</div>
+</div>
+<p><strong>Easy peasy!</strong> And if we wanted to get fancy, we could also change the order in which the qubits are added…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_circuit2</span> <span class="o">=</span> <span class="n">more_qubits2</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="n">more_qubits</span><span class="p">,</span> <span class="n">qubits</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">combined_circuit2</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_17_0.png" src="_images/Tutorial03_17_0.png" />
+</div>
+</div>
+<p>Above, we have reversed the order of the qubits being added to the left circuit. Instead of ‘0, 1, 2’, we specified ‘2, 1, 0’.</p>
+<p>Ok, we’re ready to explore some interesting things we can do with quantum circuits.</p>
+</section>
+<section id="random-sampling-of-bitstrings">
+<h2>4. Random Sampling of Bitstrings<a class="headerlink" href="#random-sampling-of-bitstrings" title="Permalink to this headline">¶</a></h2>
+<p>We know that when we place a qubit in an equal superposition state, the probability of measuring the <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> states are equal.<br></p>
+<p>If we were to place multiple qubits into equal superposition and measure them all at once, then we’ll obtain a string of ‘0’s and ‘1’s. The interesting thing happends when we run the circuit again and again. Let’s see..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qc</span><span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>                      
+
+<span class="n">qc</span><span class="o">.</span><span class="n">measure_all</span><span class="p">()</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_20_0.png" src="_images/Tutorial03_20_0.png" />
+</div>
+</div>
+<p>We will run the circuit once to see the results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span> <span class="o">=</span> <span class="n">BasicAer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span> 
+
+<span class="n">job</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">counts</span><span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1010&#39;: 1}
 </pre></div>
 </div>
 </div>
 </div>
+<p>So we obtained a bitstring of length 4, a measurement for each qubit. <strong>Run the circuit again.</strong></p>
+<p>We are likely to obtain different results each time we execute the circuit. Let’s visualize the results we’ll obtain if we ran the circuit a few thousand times.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+<span class="n">counts</span><span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;silver&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tutorial03_24_0.png" src="_images/Tutorial03_24_0.png" />
+</div>
+</div>
+<p>With 8000 shots of the circuit, we see that all possible bitstrings (there are <span class="math notranslate nohighlight">\(2^4=16\)</span> possibilities) from ‘0000’ to ‘1111’ are observed with fairly equal probability.</p>
+<p><strong>Can you think of what this implies for the quantum state of the circuit before the measurement?</strong></p>
+<div class="toggle docutils container">
+<p>The collective state of the quantum circuit prior to <strong>measurement collapse</strong> is an equal <strong>superposition</strong> of all 16 possible bitstring states.</p>
+<p>This means that by putting our qubits into equal superposition we can perform calculations on many possibilities all at once!</p>
+</div>
+<p><strong>That’s it for this tutorial!</strong> <br> Tune in for the next tutorial where the fun truly begins…</p>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="try-your-own-code">
+<h1><strong>Try Your Own Code</strong><a class="headerlink" href="#try-your-own-code" title="Permalink to this headline">¶</a></h1>
+<p><strong>We leave you this space to enter and play around with your own quantum programming code</strong>.   You may want to restart the kernel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit</span> 
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -445,7 +708,21 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Tutorial02.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tutorial B: More Single Qubit Gates</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="comingsoon.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorial D: Multi-Qubit Operations &amp; Demonstrating Quantum Mechanics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

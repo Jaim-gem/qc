@@ -1,9 +1,9 @@
-# Tutorial C: Multiple Qubit Operations and Quantum Circuits
-## **Coming Soon!** 
-
+# Tutorial D: Multi-Qubit Operations & Demonstrating Quantum Mechanics
 &nbsp; 
 
-**Wow! You're an ambitious one!** **Congratulations on reaching so far in the book.**
+## **Coming Soon!** 
 
-*Unfortunately*, this section isn't ready as yet **but check back tomorrow**, and who knows, *maybe it'll be here*? **:)**
+**Wow! You're an ambitious one! Congratulations on reaching so far in the book.**
+
+Unfortunately, this section isn't available as yet, but check back soon and who knows, *maybe it'll be here? :)*
 
