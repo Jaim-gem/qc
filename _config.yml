@@ -33,5 +33,6 @@ html:
   
 launch_buttons:
   notebook_interface: "classic"
-  binderhub_url: "https://mybinder.org/v2/gh/Jaim-gem/qc/gh-pages?labpath=%2F_sources" 
-  thebe: true
+  binderhub_url: "https://mybinder.org/v2/gh/Jaim-gem/qc/gh-pages?labpath=_sources" 
+  thebe                  : true
+  colab_url: "https://colab.research.google.com"
