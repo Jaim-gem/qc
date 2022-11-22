@@ -27,9 +27,10 @@ The **buttons** on the *top right corner* of your page can add to the interactiv
 
 If you already have Programming experience, you can follow the link to *BinderHub* to be able to edit your own versions of the code in Jupyter notebook. 
 
-If not, you can play around with the Qiskit code right on the page by clicking on the *rocket* button and selecting "**Live Demo**". 
+If not, you can play around with the Qiskit code right on the page by clicking on the *rocket* button and selecting " **Live Demo** ". Click '**run**' on the first cell. The kernel may take up to a couple minutes to load, so *please be patient!*
 
 If ever you mess up (don't worry), you can always reload the page to reset the original code.
+
  
 
 *So let's get started on some Quantum Programming!*

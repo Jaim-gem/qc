@@ -31,7 +31,6 @@ parts:
     - file: Tutorial02
     - file: Tutorial03
     - file: comingsoon
-    - file: CircuitComposer
   - caption: Back Matter
     chapters:
     - file: QuantumGlossary
